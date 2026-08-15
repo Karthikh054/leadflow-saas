@@ -17,6 +17,7 @@ const leadRoutes = require("./routes/leadRoutes");
 const allowedOrigins = [
     "http://localhost:5173",
     "https://leadflow-saas-woad.vercel.app",
+    "https://leadflow-saas-51n60xsi9-karthikh054s-projects.vercel.app",
 ];
 
 app.use(
