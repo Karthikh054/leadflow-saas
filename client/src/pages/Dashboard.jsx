@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import { logoutUser } from "../store/authSlice";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
     const dispatch = useDispatch();
@@ -42,7 +43,12 @@ const Dashboard = () => {
                 <p className="mt-2 text-gray-500">
                     Here's what's happening with your CRM.
                 </p>
-
+                <Link
+    to="/leads"
+    className="inline-block rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-700"
+>
+    Manage Leads
+</Link>
                 <div className="mt-8 grid gap-6 md:grid-cols-4">
 
                     <div className="rounded-xl bg-white p-6 shadow-sm">

@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import { getCurrentUser } from "./store/authSlice";
+import Leads from "./pages/Leads";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -45,6 +46,15 @@ const App = () => {
                 element={
                     <ProtectedRoute>
                         <Dashboard />
+                    </ProtectedRoute>
+                }
+            />
+
+            <Route
+                path="/leads"
+                element={
+                    <ProtectedRoute>
+                        <Leads />
                     </ProtectedRoute>
                 }
             />
