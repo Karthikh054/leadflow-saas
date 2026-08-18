@@ -10,6 +10,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 import { getCurrentUser } from "./store/authSlice";
 import Leads from "./pages/Leads";
+import DashboardLayout from "./layouts/DashboardLayout";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -40,7 +41,7 @@ const App = () => {
                 path="/register"
                 element={<Register />}
             />
-
+            <Route element={<DashboardLayout/>}>
             <Route
                 path="/dashboard"
                 element={
@@ -68,7 +69,7 @@ const App = () => {
                     />
                 }
             />
-
+</Route>
         </Routes>
     );
 };
